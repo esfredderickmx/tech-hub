@@ -33,9 +33,9 @@ enum EmployeePosition: int {
   public function getColor(): string {
     return match ($this) {
       self::ADMIN => 'badge-primary',
-      self::SALESMAN => 'badge-success',
+      self::SALESMAN => 'badge-secondary',
       self::STOCK_MANAGER => 'badge-accent',
-      self::SHIPPER => 'badge-info',
+      self::SHIPPER => 'badge-neutral',
     };
   }
 }

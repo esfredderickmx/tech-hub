@@ -31,6 +31,9 @@ new class extends Component {
       @scope('cell_image', $product)
       <img src="/storage/{{ $product->image }}" class="h-24 rounded-lg" alt="Imagen del producto"/>
       @endscope
+      @scope('cell_price', $product)
+      <span>{{ Number::currency($product->price) }}</span>
+      @endscope
 
       @scope('actions', $product)
       <div class="flex gap-2">

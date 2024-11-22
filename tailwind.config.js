@@ -11,13 +11,6 @@ export default {
     './vendor/robsontenorio/mary/src/View/Components/**/*.php',
   ],
   darkMode: 'class',
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-      },
-    },
-  },
   daisyui: {
     themes: [
       {
@@ -34,8 +27,6 @@ export default {
           'warning': '#f3b52e',    // Dorado para advertencias
           'error': '#f56c6c',       // Rojo para errores
         },
-      },
-      {
         dark: {
           'primary': '#0b3a61',    // Azul ligeramente más oscuro para mayor contraste
           'secondary': '#f4e1a1',  // Un crema más saturado para mayor visibilidad
@@ -50,8 +41,14 @@ export default {
           'error': '#f56c6c',       // Rojo suave para errores
         },
       },
-
     ],
+  },
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [
     require('daisyui'),

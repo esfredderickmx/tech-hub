@@ -29,7 +29,7 @@ new class extends Component {
 
     <x-table :headers="$headers" :rows="$providers" :sort-by="$sortBy" striped with-pagination>
       @scope('cell_type', $provider)
-      <x-badge :value="$provider->type->getLabel()" class="{{ $provider->type->getColor() }}"/>
+      <x-badge :value="$provider->type->getLabel()" :class="$provider->type->getColor()"/>
       @endscope
 
       @scope('actions', $provider)
